@@ -6,11 +6,11 @@ const Calculator = () => {
     <>
       <ButtonStyle/>
       <div className='wrapperButton'>
-        {[...Array(10).keys()].map((num, index) => (<button className='numberButton' key={index}>{num}</button>))}
-
+        {[...Array(10).keys()].map((num, index) => (<button className='numberButton' value={num} key={index}>{num}</button>))}
         <button>+</button>
         <button>-</button>
         <button>X</button>
+        <input type="text"/>
       </div>
 
     </>
