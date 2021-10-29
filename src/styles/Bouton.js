@@ -11,7 +11,7 @@ export const ButtonStyle = createGlobalStyle`
   .wrapperButton {
     padding: 10px;
     background: grey;
-    width: 50%;
+    width: 30%;
     padding: 20px;
     border-radius: 20px;
   }

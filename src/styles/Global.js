@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const ButtonStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -18,4 +18,4 @@ const ButtonStyle = createGlobalStyle`
   }
 `;
 
-export default ButtonStyle
+export default GlobalStyle
