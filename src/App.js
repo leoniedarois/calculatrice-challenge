@@ -1,15 +1,17 @@
-import './App.css';
-import GlobalStyle from "./styles/Global";
+import './App.css'
+import GlobalStyle from './styles/Global'
+import Calculator from './components/Calculator'
 
-function App() {
+const App = () => {
   return (
     <>
       <GlobalStyle/>
       <div>
-        hello
+        <h1>Calcul something</h1>
+        <Calculator/>
       </div>
     </>
   )
 }
 
-export default App;
+export default App
