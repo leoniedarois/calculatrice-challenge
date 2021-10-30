@@ -1,7 +1,7 @@
-import {createGlobalStyle} from 'styled-components'
+import {createGlobalStyle} from "styled-components"
 
 export const ButtonStyle = createGlobalStyle`
-  .numberButton {
+  .btn {
     background: white;
     margin: 3% 3%;
     width: 27%;

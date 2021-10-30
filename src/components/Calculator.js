@@ -1,22 +1,38 @@
-import {ButtonStyle} from '../styles/Bouton'
-import {useState} from 'react'
+import {ButtonStyle} from "../styles/Bouton"
+import {useDispatch, useSelector} from "react-redux"
+import {setKeyboardValue, setOperator, setResult} from "../actions/actions-types"
 
 const Calculator = () => {
-  const [result, setResult] = useState(0)
-  const [operator, setOperator] = useState('')
+  const dispatch = useDispatch()
+  const {screen} = useSelector((state) => state)
+
+  const getKeyboardValue = (e) => {
+    dispatch(setKeyboardValue(e.target.value))
+  }
+
+  const getOperatorValue = (e) => {
+    dispatch(setOperator(e.target.value))
+  }
+
+  const getResult = () => {
+    dispatch(setResult())
+  }
 
   return (
     <>
       <ButtonStyle/>
+      <input type="text" placeholder="Result" value={screen}/>
       <div className='wrapperButton'>
-        {[...Array(10).keys()].map((num, index) => (<button className='numberButton' onClick={(e) => console.log(e.target.value)} value={num} key={index}>{num}</button>))}
+        {[...Array(10).keys()].map((num, index) => (
+          <button className='btn' onClick={(e) => getKeyboardValue(e)} value={num} key={index}>{num}</button>)
+        )}
 
-        <button value="+" onClick={(e) => setOperator(e.target.value)}>+</button>
-        <button value="-" onClick={(e) => setOperator(e.target.value)}>-</button>
-        <button value="*" onClick={(e) => setOperator(e.target.value)}>X</button>
+        <button className="btn" value="+" onClick={(e) => getOperatorValue(e)}>+</button>
+        <button className="btn" value="-" onClick={(e) => getOperatorValue(e)}>-</button>
+        <button className="btn" value="*" onClick={(e) => getOperatorValue(e)}>X</button>
 
-        <h2>{result}</h2>
-        <button ontype="submit" onClick={() => console.log(1, 5, operator)}>Calcul</button>
+        <button className="btn" onClick={() => getResult()}>=</button>
+
       </div>
 
     </>
