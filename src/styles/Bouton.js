@@ -8,7 +8,7 @@ export const ButtonStyle = createGlobalStyle`
     padding: 10% 0;
     cursor: pointer;
   }
-  .wrapperButton {
+  .wrapperBtn {
     padding: 10px;
     background: grey;
     width: 30%;
