@@ -8,9 +8,9 @@ const stateInit = {
 }
 
 const reducer = (state = stateInit, action = {}) => {
-  const {payload} = action
+  const {payload, type} = action
 
-  switch (action.type) {
+  switch (type) {
     case KEYBOARD:
       const newNumber = state.value + payload;
       return {
@@ -43,7 +43,7 @@ const reducer = (state = stateInit, action = {}) => {
     default:
       return state
   }
-};
+}
 
 export default reducer
 
