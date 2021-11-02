@@ -4,8 +4,8 @@ const stateInit = {
   value: '',
   operator: [],
   result: '',
-  screen: '',
-};
+  screen: ''
+}
 
 const reducer = (state = stateInit, action = {}) => {
   const {payload} = action
@@ -25,7 +25,7 @@ const reducer = (state = stateInit, action = {}) => {
         operator: [...state.operator, Number(state.value), payload],
         screen: payload,
         value: ""
-      };
+      }
 
     case RESULT:
       const calcul = [...state.operator, Number(state.value)]
@@ -41,10 +41,10 @@ const reducer = (state = stateInit, action = {}) => {
       }
 
     default:
-      return state;
+      return state
   }
 };
 
-export default reducer;
+export default reducer
 
   
