@@ -1,4 +1,4 @@
-import { KEYBOARD, OPERATOR, RESULT } from "../constants/actions"
+import {KEYBOARD, OPERATOR, RESULT} from "../constants/actions"
 
 const stateInit = {
   value: '',
